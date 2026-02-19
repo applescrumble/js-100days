@@ -3,8 +3,23 @@ const cards = document.querySelectorAll('.card');
 const slots = document.querySelectorAll('.slot');
 
 cards.forEach(card => {
+    setRandomPosition(card);
     setupDrag(card);
 });
+
+function setRandomPosition(card){
+    const minX=50;
+    const maxX=window.innerWidth-150;
+    const minY=350;
+    const maxY=window.innerHeight-200;
+
+    const randomX=Math.floor(Math.random()*(maxX-minX))+minX;
+    const randomY=Math.floor(Math.random()*(maxY-minY))+minY;
+
+    card.style.left=randomX+'px';
+    card.style.top=randomY+'px';
+}
+
 
 function setupDrag(card) {
     card.addEventListener('mousedown', function(e) {

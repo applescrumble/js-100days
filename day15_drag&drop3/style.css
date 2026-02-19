@@ -1,3 +1,9 @@
+/* スロットの個別配置 */
+#slot-A { left: 200px; top: 100px; }
+#slot-B { left: 450px; top: 100px; }
+#slot-C { left: 700px; top: 100px; }
+
+
 body {
     background-color: #f0f2f5;
     font-family: sans-serif;
@@ -41,6 +47,7 @@ body {
     user-select: none;
     z-index: 10;
     transition: background 0.3s, transform 0.1s;
+    
 }
 
 .card:active {
