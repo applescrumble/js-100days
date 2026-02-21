@@ -1,3 +1,22 @@
+/* style.css の冒頭に追加 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background-color: #f0f8ff; /* 優しい水色 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+
+
 .hidden {
   display: none;
 }
@@ -8,6 +27,7 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
 }
+
 .start h1{
     text-align: center;
 }
