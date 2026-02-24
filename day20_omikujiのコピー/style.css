@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+button{
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+body {
+  font-family: "Tsukushi A Round Gothic", "筑紫A丸ゴシック", "Hiragino Sans", sans-serif;
+  background-color: #eef6ff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ゲームの外枠 */
+.game-container {
+  width: 100%;
+  max-width: 800px;
+  height: 600px;
+  background: white;
+  border: 6px solid #4a90e2;
+  border-radius: 30px;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* テキストボックス */
+.content-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.status-bar {
+  margin-bottom: 20px;
+  background: #4a90e2;
+  color: white;
+  padding: 5px 30px;
+  border-radius: 20px;
+}
+
+.text-box {
+  width: 90%;
+  background: #f9f9f9;
+  border: 3px solid #4a90e2;
+  border-radius: 20px;
+  padding: 30px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* ボタン関連 */
+.btn-box {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-btn {
+  background: linear-gradient(to bottom, #ffcc00, #ff9900);
+  border: none;
+  border-bottom: 5px solid #cc7a00;
+  color: white;
+  padding: 15px 50px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.main-btn:active {
+  transform: translateY(3px);
+  border-bottom: 2px solid #cc7a00;
+}
+
+.ox-btn {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: none;
+  font-size: 60px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.is-true {
+  background: #ff5e5e;
+  border-bottom: 8px solid #d43f3f;
+}
+
+.is-false {
+  background: #5e97ff;
+  border-bottom: 8px solid #3f6fd4;
+}
+
+.ox-btn:active {
+  transform: translateY(4px);
+  border-bottom-width: 2px;
+}
+
+/* キャラクター配置エリア（後で使う用） */
+.character-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* ボタンの邪魔をしない */
+}
+
+.char {
+  position: absolute;
+  bottom: 0;
+}
+.enemy-side { left: 5%; }
+.player-side { right: 5%; }
