@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ネットリテラシークイズ</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      
+      <div id="start-screen" class="screen">
+        <div class="start-content">
+          <h1>ネットリテラシー<br>クイズ</h1>
+          <button id="start-btn" class="main-btn">はじめる</button>
+        </div>
+      </div>
+
+      <div id="quiz-screen" class="screen hidden">
+        
+        <div id="quiz" class="content-wrapper">
+          <div class="status-bar">
+            <h2 id="quiz-number">第１問</h2>
+          </div>
+          <div class="text-box">
+            <p id="quiz-question"></p>
+          </div>
+          <div class="btn-box">
+            <button id="true-btn" class="ox-btn is-true">○</button>
+            <button id="false-btn" class="ox-btn is-false">×</button>
+          </div>
+        </div>
+
+        <div id="answer" class="content-wrapper hidden">
+          <div class="status-bar">
+            <h1 id="judge"></h1>
+          </div>
+          <div class="text-box">
+            <h2 id="answer-correct"></h2>
+            <p id="answer-comment"></p>
+          </div>
+          <div class="btn-box">
+            <button id="next-btn" class="main-btn">次の問題へ</button>
+          </div>
+        </div>
+
+        <div class="character-area">
+          <div class="char enemy-side">
+            </div>
+          <div class="char player-side">
+            </div>
+        </div>
+      </div>
+
+      <div id="result-screen" class="screen hidden">
+        <div class="result-content">
+          <h1 class="congrats">おつかれさまでした！</h1>
+          <h2 id="scoreReport"></h2>
+          <button id="restart-btn" class="main-btn">タイトルに戻る</button>
+        </div>
+      </div>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
